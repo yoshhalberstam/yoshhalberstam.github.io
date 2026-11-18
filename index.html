@@ -1,314 +1,69 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Yosh Halberstam</title>
-  <meta name="description" content="PhD economist: causal inference and measurement for labor markets, AI and public policy." />
-
-  <style>
-    :root{
-      --bg: #0b0f14;
-      --card: rgba(255,255,255,0.06);
-      --border: rgba(255,255,255,0.10);
-      --text: #e8eef7;
-      --muted: #b9c4d6;
-      --link: #7aa7ff;
-      --shadow: 0 10px 30px rgba(0,0,0,0.35);
-      --radius: 18px;
-      --max: 1040px;
-    }
-    *{ box-sizing:border-box; }
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      background:
-        radial-gradient(1200px 600px at 20% 0%, rgba(122,167,255,0.18), transparent 60%),
-        radial-gradient(900px 500px at 80% 10%, rgba(124,255,214,0.10), transparent 55%),
-        var(--bg);
-      color: var(--text);
-      line-height: 1.55;
-    }
-    a{ color: var(--link); text-decoration: none; }
-    a:hover{ text-decoration: underline; }
-    .wrap{ max-width: var(--max); margin: 0 auto; padding: 28px 18px 64px; }
-
-    header{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 14px;
-      padding: 6px 0 22px;
-    }
-    .brand{
-      font-weight: 750;
-      letter-spacing: 0.2px;
-      font-size: 18px;
-    }
-    nav{
-      display:flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      justify-content:flex-end;
-      font-size: 14px;
-      color: var(--muted);
-    }
-    nav a{ color: var(--muted); }
-    nav a:hover{ color: var(--text); text-decoration:none; }
-
-    .hero{
-      display:grid;
-      grid-template-columns: 1.25fr 0.75fr;
-      gap: 16px;
-      align-items: stretch;
-      margin-top: 6px;
-    }
-    @media (max-width: 900px){
-      .hero{ grid-template-columns: 1fr; }
-    }
-
-    .card{
-      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 22px;
-    }
-
-    h1{
-      margin: 0 0 10px;
-      font-size: 38px;
-      line-height: 1.12;
-      letter-spacing: -0.5px;
-    }
-    .subtitle{
-      color: var(--muted);
-      font-size: 16px;
-      margin: 0 0 14px;
-      max-width: 70ch;
-    }
-
-    .pills{
-      display:flex;
-      flex-wrap:wrap;
-      gap: 8px;
-      margin: 12px 0 18px;
-    }
-    .pill{
-      font-size: 12px;
-      color: var(--muted);
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.03);
-      padding: 6px 10px;
-      border-radius: 999px;
-    }
-
-    .cta{
-      display:flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-top: 12px;
-    }
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding: 10px 12px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.05);
-      color: var(--text);
-      font-size: 14px;
-      text-decoration:none;
-    }
-    .btn.primary{
-      background: rgba(122,167,255,0.18);
-      border-color: rgba(122,167,255,0.35);
-    }
-    .btn:hover{ text-decoration:none; filter: brightness(1.06); }
-
-    .grid4{
-      display:grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-      margin-top: 16px;
-    }
-    @media (max-width: 900px){
-      .grid4{ grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 520px){
-      .grid4{ grid-template-columns: 1fr; }
-    }
-    .metric{
-      padding: 14px;
-      border-radius: 14px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.03);
-    }
-    .metric .big{
-      font-size: 22px;
-      font-weight: 800;
-      letter-spacing: -0.3px;
-      margin-bottom: 4px;
-    }
-    .metric .small{
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.35;
-    }
-
-    .photo{
-      display:flex;
-      flex-direction: column;
-      gap: 12px;
-      height: 100%;
-    }
-    .photo img{
-      width:100%;
-      height:auto;
-      border-radius: 14px;
-      border: 1px solid var(--border);
-      object-fit: cover;
-    }
-    .contact{
-      color: var(--muted);
-      font-size: 14px;
-      display:flex;
-      flex-direction:column;
-      gap: 8px;
-      padding-top: 4px;
-    }
-    .contact b{ color: var(--text); font-weight: 650; }
-
-    section{ margin-top: 18px; }
-    .section-title{
-      font-size: 13px;
-      color: rgba(185,196,214,0.9);
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      margin: 22px 0 10px;
-    }
-    .list{
-      margin: 0;
-      padding-left: 18px;
-      color: var(--muted);
-    }
-    .list li{ margin: 7px 0; }
-
-    footer{
-      margin-top: 34px;
-      color: rgba(185,196,214,0.75);
-      font-size: 12px;
-      display:flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yosh Halberstam</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500&display=swap">
+<style>
+  :root { --bg:#fcfcfa; --text:#1d1f22; --muted:#5d6268; --rule:#e4e4e0; --link:#1f4f9a; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:17px/1.6 "Source Serif 4", Georgia, serif; }
+  .wrap { max-width:640px; margin:0 auto; padding:40px 20px 64px; }
+  nav { font:14px/1 Inter, system-ui, sans-serif; display:flex; gap:20px; margin-bottom:56px; }
+  nav a { color:var(--muted); text-decoration:none; }
+  nav a:hover, nav a[aria-current] { color:var(--text); }
+  header { display:flex; gap:20px; align-items:center; margin-bottom:28px; }
+  header img { width:84px; height:84px; border-radius:50%; object-fit:cover; flex:none; }
+  h1 { font-size:30px; line-height:1.2; font-weight:600; margin:0; }
+  .role { font:15px/1.4 Inter, system-ui, sans-serif; color:var(--muted); margin-top:4px; }
+  h2 { font:500 13px/1 Inter, system-ui, sans-serif; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin:48px 0 16px; padding-top:20px; border-top:1px solid var(--rule); }
+  p { margin:0 0 14px; }
+  a { color:var(--link); text-underline-offset:2px; }
+  ul.findings { list-style:none; padding:0; margin:0; }
+  ul.findings li { margin:0 0 18px; }
+  .src { font:13px/1.4 Inter, system-ui, sans-serif; color:var(--muted); display:block; margin-top:2px; }
+  .cred { font:14px/1.5 Inter, system-ui, sans-serif; color:var(--muted); margin-top:-4px; }
+  .contact { font:15px/1.8 Inter, system-ui, sans-serif; }
+  footer { margin-top:56px; font:13px Inter, system-ui, sans-serif; color:var(--muted); }
+  @media (max-width:480px){ body{font-size:16px} h1{font-size:26px} header img{width:64px;height:64px} nav{margin-bottom:36px} }
+</style>
 </head>
-
 <body>
-  <div class="wrap">
-    <header>
-      <div class="brand">Yosh Halberstam</div>
-      <nav>
-        <a href="Yosh_Halberstam_Resume.pdf">Resume</a>
-        <a href="research.html">Research</a>
-        <a href="#work">Selected work</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+<div class="wrap">
+  <nav><a href="index.html" aria-current="page">Home</a><a href="research.html">Research</a><a href="Yosh_Halberstam_Resume.pdf">Resume</a><a href="mailto:yosh.halberstam@gmail.com">Email</a></nav>
 
-    <div class="hero">
-      <div class="card">
-        <h1>Causal inference and measurement for labor markets, AI and public policy</h1>
-        <p class="subtitle">
-          PhD economist with 15 years of research at the University of Toronto and the FDIC.
-          I study how incentives, institutions and information shape behavior, using administrative, survey, social-network and audio data.
-          I also evaluate the economic reasoning of generative AI models.
-        </p>
-
-        <div class="pills">
-          <span class="pill">Causal inference</span>
-          <span class="pill">Labor economics</span>
-          <span class="pill">Political economy</span>
-          <span class="pill">Social networks</span>
-          <span class="pill">Survey methodology</span>
-          <span class="pill">AI evaluation</span>
-        </div>
-
-        <div class="cta">
-          <a class="btn primary" href="Yosh_Halberstam_Resume.pdf">View resume</a>
-          <a class="btn" href="research.html">Research papers</a>
-          <a class="btn" href="#contact">Get in touch</a>
-        </div>
-
-        <div class="grid4" aria-label="Data at a glance">
-          <div class="metric">
-            <div class="big">2.2M</div>
-            <div class="small">Twitter users in network data</div>
-          </div>
-          <div class="metric">
-            <div class="big">90M</div>
-            <div class="small">Network connections</div>
-          </div>
-          <div class="metric">
-            <div class="big">40K</div>
-            <div class="small">Lawyers' voicemail greetings</div>
-          </div>
-          <div class="metric">
-            <div class="big">15 yrs</div>
-            <div class="small">Research in academia and government</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card photo" id="contact">
-        <img src="Halberstam_Photo4.jpeg" alt="Yosh Halberstam" />
-        <div class="contact">
-          <div><b>Based in:</b> Washington, DC</div>
-          <div><b>Email:</b> <a href="mailto:yosh.halberstam@gmail.com">yosh.halberstam@gmail.com</a></div>
-          <div><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/yoshhalberstam/">yoshhalberstam</a></div>
-          <div><b>Focus:</b> Labor markets, AI and public policy</div>
-        </div>
-      </div>
+  <header>
+    <img src="Halberstam_Photo4.jpeg" alt="Yosh Halberstam">
+    <div>
+      <h1>Yosh Halberstam</h1>
+      <div class="role">Economist · Washington, DC</div>
     </div>
+  </header>
 
-    <section id="work">
-      <div class="section-title">Selected work</div>
-      <div class="card">
-        <ul class="list">
-          <li><b>Political information:</b> majority-group users get more information, sooner, and like-minded information reaches like-minded users faster (<i>Journal of Public Economics</i>).</li>
-          <li><b>Voice and behavior:</b> about a third of women lawyers switch between two pitch ranges within a greeting, a pattern averages hide (working paper).</li>
-          <li><b>Pay transparency:</b> salary disclosure laws narrowed the gender pay gap among Canadian faculty by 20 to 40 percent (<i>AEJ: Applied</i>).</li>
-          <li><b>Unions:</b> faculty salaries rose about 10 percent at the bottom of the distribution; the top was unaffected (<i>AER: Insights</i>).</li>
-          <li><b>AI evaluation:</b> expert economics and finance tasks, reference solutions and rubrics for evaluating model reasoning.</li>
-        </ul>
-      </div>
-    </section>
+  <p>I study behavior and how information, incentives and institutions shape it.  My tools are causal inference and careful measurement, applied to administrative, survey, social-network and audio data.</p>
+  <p>I was an assistant professor of economics at the University of Toronto for eleven years and a senior financial economist at the FDIC's Center for Financial Research for four.  I now write expert economics and finance problems and evaluate the reasoning of AI models.</p>
+  <p class="cred">PhD and MA in Economics, Northwestern University · BA, Hebrew University of Jerusalem</p>
 
-    <section>
-      <div class="section-title">What I’m looking for</div>
-      <div class="card">
-        <ul class="list">
-          <li>Research roles on information, AI and labor markets: AI labs, research and economics teams at tech and AI companies, and policy research institutes.</li>
-          <li>Washington, DC or remote.</li>
-        </ul>
-      </div>
-    </section>
+  <h2>Selected research</h2>
+  <ul class="findings">
+    <li>Laws that made faculty salaries above a threshold public narrowed the gender pay gap among Canadian faculty by 20 to 40%.<span class="src">AEJ: Applied Economics, 2023</span></li>
+    <li>Unionization raised faculty salaries about 10% at the bottom of the pay distribution and left the top unchanged.<span class="src">AER: Insights, 2026</span></li>
+    <li>In a Twitter network of 2.2 million users and about 90 million connections, like-minded political information reached like-minded users faster.<span class="src">Journal of Public Economics, 2016</span></li>
+    <li>In about 40,000 workplace voicemail greetings, about a third of women switch between two pitch modes, a pattern that averages hide.<span class="src">Working paper, 2026</span></li>
+  </ul>
+  <p><a href="research.html">Papers, data and methods</a></p>
 
-    <footer>
-      <div>© <span id="year"></span> Yosh Halberstam</div>
-      <div>
-        <a href="Yosh_Halberstam_Resume.pdf">Resume</a> ·
-        <a href="research.html">Research</a> ·
-        <a href="mailto:yosh.halberstam@gmail.com">Email</a>
-      </div>
-    </footer>
+  <h2>Looking for</h2>
+  <p>Research and advisory roles where evidence informs decisions: AI labs and technology companies, federal agencies, and defense and policy research institutes.  Glad to travel and do field work.  Based in Washington, DC; open to remote.</p>
+
+  <h2>Contact</h2>
+  <div class="contact">
+    <a href="mailto:yosh.halberstam@gmail.com">yosh.halberstam@gmail.com</a><br>
+    <a href="https://www.linkedin.com/in/yoshhalberstam/">LinkedIn</a> · <a href="https://scholar.google.ca/citations?user=ckxLalUAAAAJ&hl=en">Google Scholar</a> · <a href="Yosh_Halberstam_Resume.pdf">Resume (PDF)</a>
   </div>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <footer>© 2026 Yosh Halberstam</footer>
+</div>
 </body>
 </html>

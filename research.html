@@ -1,341 +1,76 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Yosh Halberstam | Selected Work</title>
-  <meta name="description" content="Selected work: platform networks & diffusion, behavioral signal processing, and incentives & institutional design." />
-
-  <style>
-    :root{
-      --bg: #0b0f14;
-      --border: rgba(255,255,255,0.10);
-      --text: #e2e8f3;
-      --muted: #c3cee2;
-      --link: #7aa7ff;
-      --shadow: 0 10px 30px rgba(0,0,0,0.30);
-      --radius: 18px;
-      --max: 1040px;
-    }
-    *{ box-sizing:border-box; }
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      background:
-        radial-gradient(1200px 600px at 20% 0%, rgba(122,167,255,0.18), transparent 60%),
-        radial-gradient(900px 500px at 80% 10%, rgba(124,255,214,0.10), transparent 55%),
-        var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    a{ color: var(--link); text-decoration: none; }
-    a:hover{ text-decoration: underline; }
-
-    .wrap{ max-width: var(--max); margin: 0 auto; padding: 28px 18px 72px; }
-
-    header{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 14px;
-      padding: 6px 0 18px;
-    }
-    .brand{
-      font-weight: 750;
-      letter-spacing: 0.2px;
-      font-size: 18px;
-      color: #e8eef7;
-    }
-    nav{
-      display:flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      justify-content:flex-end;
-      font-size: 14px;
-      color: var(--muted);
-    }
-    nav a{ color: var(--muted); }
-    nav a:hover{ color: #e8eef7; text-decoration:none; }
-
-    .hero{
-      margin-top: 8px;
-      padding: 22px;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
-      box-shadow: var(--shadow);
-    }
-    h1{
-      margin: 0 0 8px;
-      font-size: 34px;
-      line-height: 1.15;
-      letter-spacing: -0.5px;
-    }
-    .subtitle{
-      color: var(--muted);
-      margin: 0;
-      max-width: 82ch;
-      font-size: 15px;
-    }
-    .submeta{
-      margin-top: 10px;
-      font-size: 13px;
-      color: rgba(195,206,226,0.95);
-    }
-
-    .section-title{
-      font-size: 13px;
-      color: rgba(185,196,214,0.9);
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      margin: 26px 0 12px;
-    }
-
-    .card{
-      background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 18px 18px 16px;
-    }
-
-    .topic{
-      display:flex;
-      flex-direction: column;
-      align-items:flex-start;
-      gap: 2px;
-      margin-bottom: 2px;
-    }
-    .topic h2{
-      margin:0;
-      font-size: 18px;
-      letter-spacing: -0.2px;
-    }
-    .topic .hint{
-      color: var(--muted);
-      font-size: 13px;
-      margin-top: 2px;
-    }
-
-    .paper{
-      margin-top: 14px;
-      padding-top: 14px;
-      border-top: 1px solid rgba(255,255,255,0.08);
-    }
-    .paper:first-of-type{
-      margin-top: 0;
-      padding-top: 0;
-      border-top: none;
-    }
-
-    .titleline{
-      display:flex;
-      flex-direction: column;
-      gap: 2px;
-      margin: 0 0 6px;
-    }
-    .ptitle{
-      font-weight: 750;
-      letter-spacing: -0.15px;
-    }
-    .venue{
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .links{
-      display:flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin: 8px 0 10px;
-    }
-    .badge{
-      display:inline-flex;
-      align-items:center;
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(122,167,255,0.35);
-      background: rgba(122,167,255,0.10);
-      color: var(--link);
-      font-size: 12px;
-      text-decoration:none;
-    }
-    .badge:hover{
-      filter: brightness(1.1);
-      text-decoration:none;
-    }
-
-    ul{
-      margin: 0 0 10px 18px;
-      color: var(--muted);
-    }
-    li{ margin: 6px 0; }
-
-    .methods{
-      color: rgba(195,206,226,0.95);
-      font-size: 12.5px;
-      margin-top: 6px;
-    }
-    .methods b{ color: #e8eef7; font-weight: 650; }
-
-    footer{
-      margin-top: 30px;
-      color: rgba(185,196,214,0.75);
-      font-size: 12px;
-      display:flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research · Yosh Halberstam</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500&display=swap">
+<style>
+  :root { --bg:#fcfcfa; --text:#1d1f22; --muted:#5d6268; --rule:#e4e4e0; --link:#1f4f9a; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:17px/1.6 "Source Serif 4", Georgia, serif; }
+  .wrap { max-width:640px; margin:0 auto; padding:40px 20px 64px; }
+  nav { font:14px/1 Inter, system-ui, sans-serif; display:flex; gap:20px; margin-bottom:56px; }
+  nav a { color:var(--muted); text-decoration:none; }
+  nav a:hover, nav a[aria-current] { color:var(--text); }
+  h1 { font-size:30px; line-height:1.2; font-weight:600; margin:0 0 12px; }
+  h2 { font:500 13px/1 Inter, system-ui, sans-serif; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin:48px 0 20px; padding-top:20px; border-top:1px solid var(--rule); }
+  p { margin:0 0 14px; }
+  a { color:var(--link); text-underline-offset:2px; }
+  .paper { margin:0 0 32px; }
+  .paper h3 { font-size:19px; line-height:1.35; font-weight:600; margin:0 0 4px; }
+  .paper h3 a { color:var(--text); text-decoration:none; }
+  .paper h3 a:hover { text-decoration:underline; }
+  .meta, .how { font:14px/1.5 Inter, system-ui, sans-serif; color:var(--muted); }
+  .meta { margin-bottom:8px; }
+  .how { margin-top:6px; }
+  .how a { margin-right:12px; }
+  footer { margin-top:56px; font:13px Inter, system-ui, sans-serif; color:var(--muted); }
+  @media (max-width:480px){ body{font-size:16px} h1{font-size:26px} nav{margin-bottom:36px} .paper h3{font-size:18px} }
+</style>
 </head>
-
 <body>
-  <div class="wrap">
-    <header>
-      <div class="brand">Yosh Halberstam</div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="Yosh_Halberstam_Resume.pdf">Resume</a>
-        <a href="mailto:yosh.halberstam@gmail.com">Email</a>
-      </nav>
-    </header>
+<div class="wrap">
+  <nav><a href="index.html">Home</a><a href="research.html" aria-current="page">Research</a><a href="Yosh_Halberstam_Resume.pdf">Resume</a><a href="mailto:yosh.halberstam@gmail.com">Email</a></nav>
 
-    <div class="hero">
-      <h1>Selected work</h1>
-      <p class="subtitle">
-        Papers on incentives, institutions and information.
-        For each paper: the data, what I found and the methods.  Tools: Stata and Python.
-      </p>
-      <div class="submeta">
-        Looking for a full publication list and citations?
-        <a href="https://scholar.google.ca/citations?user=ckxLalUAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.
-      </div>
-    </div>
+  <h1>Research</h1>
+  <p>Selected papers on how information, incentives and institutions shape behavior.  Full list on <a href="https://scholar.google.ca/citations?user=ckxLalUAAAAJ&hl=en">Google Scholar</a>.</p>
 
-    <!-- SECTION 1 -->
-    <div class="section-title">1) Social networks and political information</div>
-    <div class="card">
-      <div class="topic">
-        <h2>Who sees political information, and how fast</h2>
-        <div class="hint">Data: links and messages among 2.2 million politically engaged Twitter users, about 90 million connections</div>
-      </div>
-
-      <div class="paper">
-        <div class="titleline">
-          <span class="ptitle">
-            Homophily, Group Size, and the Diffusion of Political Information in Social Networks: Evidence from Twitter
-          </span>
-          <span class="venue">Journal of Public Economics (2016) · with Brian Knight</span>
-        </div>
-        <div class="links">
-          <a class="badge" href="homophily_twitter.pdf">Paper</a>
-          <a class="badge" href="homophily_twitter_appendix.pdf">Online appendix</a>
-        </div>
-        <ul>
-          <li>A network model predicts more exposure to like-minded information, and more connections and information for larger groups.</li>
-          <li>On Twitter, majority-group users get more information, sooner; like-minded information reaches like-minded users faster.</li>
-        </ul>
-        <div class="methods">
-          <b>Methods:</b> network model; empirical analysis of links, messages and exposure timing
-        </div>
-      </div>
-    </div>
-
-    <!-- SECTION 2 -->
-    <div class="section-title">2) Behavioral measurement from voice recordings</div>
-    <div class="card">
-      <div class="topic">
-        <h2>Pitch patterns that averages hide</h2>
-        <div class="hint">Data: about 40,000 three-second voicemail greetings from lawyers at top U.S. law firms</div>
-      </div>
-
-      <div class="paper">
-        <div class="titleline">
-          <span class="ptitle">Gender Identity and Mode-Switching Behavior: Evidence from the Human Voice</span>
-          <span class="venue">Working paper (updated November 2026)</span>
-        </div>
-        <div class="links">
-          <a class="badge" href="mode_switching.pdf">Paper</a>
-          <a class="badge" href="mode_switching_appendix.pdf">Online appendix</a>
-          <!-- SSRN: uncomment and paste the URL once live.  Same for arXiv later. -->
-          <!-- <a class="badge" href="SSRN_URL" target="_blank" rel="noopener">SSRN</a> -->
-          <!-- <a class="badge" href="ARXIV_URL" target="_blank" rel="noopener">arXiv</a> -->
-        </div>
-        <ul>
-          <li>Within a single greeting, about a third of women switch between their usual pitch and a second, near where men's voices sit.</li>
-          <li>Women associates switch more than partners and counsel (43 vs 31 percent); listeners rate women who switch as less senior.</li>
-        </ul>
-        <div class="methods">
-          <b>Methods:</b> pitch tracking, Gaussian mixture models, survey experiment; Python
-        </div>
-      </div>
-    </div>
-
-    <!-- SECTION 3 -->
-    <div class="section-title">3) Labor market institutions and pay</div>
-    <div class="card">
-      <div class="topic">
-        <h2>Pay transparency and unions in Canadian universities</h2>
-        <div class="hint">Data: administrative salary records for Canadian university faculty</div>
-      </div>
-
-      <div class="paper">
-        <div class="titleline">
-          <span class="ptitle">Pay Transparency and the Gender Gap</span>
-          <span class="venue">
-            American Economic Journal: Applied Economics (2023) · with Michael Baker, Kory Kroft, Alexandre Mas, Derek Messacar
-          </span>
-        </div>
-        <div class="links">
-          <a class="badge" href="app.20210141.pdf">Paper</a>
-          <a class="badge" href="pay_transparency_appendix.pdf">Online appendix</a>
-        </div>
-        <ul>
-          <li>Provincial laws made faculty salaries above a threshold public, adopted at different times across provinces.</li>
-          <li>The laws narrowed the gender pay gap by about 20 to 40 percent.</li>
-        </ul>
-        <div class="methods">
-          <b>Methods:</b> event-study design using variation across institutions and departments
-        </div>
-      </div>
-
-      <div class="paper">
-        <div class="titleline">
-          <span class="ptitle">
-            The Impact of Unions on the Wage Distribution: Evidence from Higher Education
-          </span>
-          <span class="venue">
-            American Economic Review: Insights (2026) · with Michael Baker, Kory Kroft, Alexandre Mas, Derek Messacar
-          </span>
-        </div>
-        <div class="links">
-          <a class="badge" href="unions.pdf">Paper</a>
-          <a class="badge" href="unions_appendix.pdf">Online appendix</a>
-        </div>
-        <ul>
-          <li>Unionization raised salaries about 10 percent at the bottom of the distribution and left the top unaffected.</li>
-          <li>Evidence points to contractual salary floors; employment changed little, and higher enrollment paid for the wage increase.</li>
-        </ul>
-        <div class="methods">
-          <b>Methods:</b> staggered-rollout design, distributional analysis
-        </div>
-      </div>
-    </div>
-
-    <footer>
-      <div>© <span id="year"></span> Yosh Halberstam</div>
-      <div>
-        <a href="index.html">Home</a> ·
-        <a href="Yosh_Halberstam_Resume.pdf">Resume</a> ·
-        <a href="https://scholar.google.ca/citations?user=ckxLalUAAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a> ·
-        <a href="mailto:yosh.halberstam@gmail.com">Email</a>
-      </div>
-    </footer>
+  <h2>Information and networks</h2>
+  <div class="paper">
+    <h3><a href="homophily_twitter.pdf">Homophily, Group Size, and the Diffusion of Political Information in Social Networks: Evidence from Twitter</a></h3>
+    <div class="meta">Journal of Public Economics, 2016 · with Brian Knight</div>
+    <p>In a network of 2.2 million politically engaged Twitter users and about 90 million connections, users in the larger political group received more information, sooner, and like-minded information reached like-minded users faster.</p>
+    <div class="how">Network model; data on links, messages and exposure timing.</div>
+    <div class="how"><a href="homophily_twitter.pdf">Paper</a><a href="homophily_twitter_appendix.pdf">Appendix</a></div>
   </div>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <h2>Measurement from voice</h2>
+  <div class="paper">
+    <h3><a href="mode_switching.pdf">Gender Identity and Mode-Switching Behavior: Evidence from the Human Voice</a></h3>
+    <div class="meta">Working paper, 2026</div>
+    <p>In about 40,000 three-second voicemail greetings from lawyers at top U.S. law firms, about a third of women switch between two pitch modes: their usual pitch and a second near where men's voices sit.  Associates switch more than partners and counsel (43% vs. 31%), and listeners rate women who switch as less senior.</p>
+    <div class="how">Pitch tracking, Gaussian mixture models, listener survey experiment.</div>
+    <div class="how"><a href="mode_switching.pdf">Paper</a><a href="mode_switching_appendix.pdf">Appendix</a></div>
+  </div>
+
+  <h2>Labor market institutions</h2>
+  <div class="paper">
+    <h3><a href="app.20210141.pdf">Pay Transparency and the Gender Gap</a></h3>
+    <div class="meta">AEJ: Applied Economics, 2023 · with Michael Baker, Kory Kroft, Alexandre Mas and Derek Messacar</div>
+    <p>Provincial laws made faculty salaries above a threshold public, adopted at different times across provinces.  They narrowed the gender pay gap by 20 to 40%.</p>
+    <div class="how">Administrative salary records; event-study design across institutions and departments.</div>
+    <div class="how"><a href="app.20210141.pdf">Paper</a><a href="pay_transparency_appendix.pdf">Appendix</a></div>
+  </div>
+  <div class="paper">
+    <h3><a href="unions.pdf">The Impact of Unions on the Wage Distribution: Evidence from Higher Education</a></h3>
+    <div class="meta">AER: Insights, 2026 · with Michael Baker, Kory Kroft, Alexandre Mas and Derek Messacar</div>
+    <p>Unionization raised salaries about 10% at the bottom of the distribution and left the top unchanged, consistent with contractual salary floors.  Employment changed little; higher enrollment paid for the increase.</p>
+    <div class="how">Staggered-rollout design; distributional analysis.</div>
+    <div class="how"><a href="unions.pdf">Paper</a><a href="unions_appendix.pdf">Appendix</a></div>
+  </div>
+
+  <footer>© 2026 Yosh Halberstam · <a href="mailto:yosh.halberstam@gmail.com">Email</a></footer>
+</div>
 </body>
 </html>
